@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- //////////////////////////////Partial Metadata/////////////////////////////////////// -->
+    <%- include('./partials/metadata') %>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>EVERGLOW - Manos y Pies</title>
+</head>
+
+<body class="bgcolor">
+    <!-- //////////////////////////////Partial Header/////////////////////////////////////// -->
+    <%- include('./partials/header') %>
+    <main>
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="text-center mb-5">¿Qué hacemos?</h2>
+                    </div>
+                    <div class="row d-flex flex-wrap justify-content-md-aroundalign-items-center">
+                        <div class="col-md-3 text-center ico">
+                            <img src="img/ico-1.png" alt="Herramientas manicuría">
+                            <div>
+                                <p class="text-center">Belleza de<br>Manos y Pies</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center ico">
+                            <img src="img/ico-2.png" alt="Esmalte de uñas">
+                            <div>
+                                <p class="text-center">Esmaltado<br>Semipermanente</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 text-center ico">
+                            <img src="img/ico-3.png" alt="Manos y esmalte">
+                            <div>
+                                <p class="text-center">Tratamientos<br>Cosméticos</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center ico">
+                            <img src="img/ico-4.png" alt="Mano de hombre">
+                            <div>
+                                <p class="text-center">Manicuría<br>Masculina</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section class="nuestros-servicios">
+            <div class="container">
+                <div class="row">                    
+                    <div class="col-md-8 ms-auto">
+                        <h2 class="text-center mt-5">Nuestros Servicios</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 ms-auto">
+                        <div class="row">
+                            <!-- Iterar Array -->
+                            <!-- ////////////////////////////////////////////////////////////////////////////////////////////////// -->
+                            <% services.forEach(service => {%>
+                            <div class="col-lg-6">
+                                <div class="card-custom my-4">
+                                    <div class="card-body p-0">
+                                        <div class="d-flex align-items-center">
+                                            <img class="w-50" src="<%= service.image%>" alt="<%= service.alt%>">
+                                            <h5 class="card-title p-2 fw-bold fst-italic"><%= service.service%></h5>
+                                        </div>
+                                        <div class="px-2">
+                                            <ul class="list-unstyled">                                                
+                                                <li class="my-2"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                        height="16" fill="CurrentColor" class="bi bi-check-circle-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                                    </svg><%= service.task1%></li>
+
+                                                <li class="my-2"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                        height="16" fill="CurrentColor" class="bi bi-check-circle-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                                    </svg><%= service.task2%></li>
+                                                <li class="my-2"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                        height="16" fill="CurrentColor" class="bi bi-check-circle-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                                    </svg><%= service.task3%></li>
+                                            </ul>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <% });%>
+                            <!-- Fin de iteracción -->
+                            <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <h2 class="text-center">¿Cuál te gustó?</h2>
+            <h5 class="text-center mb-5">Ahora es nuestro turno de hacerlo realidad</h5>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card d-flex flex-row mt-5 mb-3 align-items-center">
+                            <div class="p-2">
+                                <img class="w-75" src="img/estrella.png" alt="Icono estrella">
+                            </div>
+                            <div class="m-0">
+                                <h4 class="m-0">Productos de excelente calidad</h4>
+                            </div>
+                        </div>
+                        <div class="card d-flex flex-row mb-3 align-items-center">
+                            <div class="p-2">
+                                <img class="w-75" src="img/casa.png" alt="Icono casa">
+                            </div>
+                            <div class="m-0">
+                                <h4 class="m-0">Servicio a domicilio sin costo</h4>
+                            </div>
+                        </div>
+                        <div class="card d-flex flex-row mb-3 align-items-center">
+                            <div class="p-2">
+                                <img class="w-75" src="img/colores.png" alt="Icono paleta de colores">
+                            </div>
+                            <div class="m-0">
+                                <h4 class="m-0">Amplia gama de colores</h4>
+                            </div>
+                        </div>
+                        <div class="card d-flex flex-row mb-3 align-items-center">
+                            <div class="p-2">
+                                <img class="w-75" src="img/calidad.png" alt="Icono garantía de calidad">
+                            </div>
+                            <div class="m-0">
+                                <h4 class="m-0">Trabajos con garantía</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center mt-5 custom-card">
+                        <img src="img/paint.svg" alt="Esmalte de uñas abierto">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- //////////////////////////////Partial Footer/////////////////////////////////////// -->
+        <%- include('./partials/footer') %>
+
+        <!-- //////////////////////////////Partial Modal/////////////////////////////////////// -->
+        <%- include('./partials/modal') %>
+
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                        crossorigin="anonymous"></script>
+</body>
+
+</html>

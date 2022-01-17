@@ -1,0 +1,87 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header bgcolor">
+                <h5 class="modal-title" id="exampleModalLabel">Turnos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bgcolor">
+                <form action="https://formspree.io/f/xeqvykjy" method="POST">
+                    <div class="row">
+                        <div class="col mb-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="floatingInputValue"
+                                    placeholder="Nombre" aria-label="Nombre" name="name" required>
+                                <label for="floatingInputValue">Nombre</label>
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="floatingInputValue"
+                                    placeholder="Apellido" aria-label="Apellido" name="sname" required>
+                                <label for="floatingInputValue">Apellido</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="tel" class="form-control" id="floatingInputValue"
+                            placeholder="Número de teléfono" aria-label="Número de teléfono" name="tel"
+                            required>
+                        <label for="floatingInputValue">Número de teléfono</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInputValue"
+                            placeholder="name@ejemplo.com" value="mail@ejemplo.com" name="mail">
+                        <label for="floatingInputValue">Ingrese su email</label>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col d-flex justify-content-around">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                    value="option1" name="option">
+                                <label class="form-check-label" for="inlineCheckbox1">Express</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
+                                    value="option2" name="option">
+                                <label class="form-check-label" for="inlineCheckbox2">Beauty</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3"
+                                    value="option3" name="option">
+                                <label class="form-check-label" for="inlineCheckbox3">Semi</label>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col d-flex justify-content-around">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                        value="option4" name="option">
+                                    <label class="form-check-label" for="inlineCheckbox1">Deco</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
+                                        value="option5" name="option">
+                                    <label class="form-check-label" for="inlineCheckbox2">Esculpidas</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3"
+                                        value="option6" name="option">
+                                    <label class="form-check-label" for="inlineCheckbox3">Feet Beauty</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" placeholder="Leave a comment here"
+                                id="floatingTextarea2" style="height: 100px" name="comment"></textarea>
+                            <label for="floatingTextarea2">Comentarios</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                        <button type="submit" class="cta" aria-label="Submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
