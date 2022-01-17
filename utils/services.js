@@ -62,7 +62,7 @@
 const request = require('postman-request');
 
 // const baseURL = 'http://localhost:3001';
-const baseURL = 'https://everglow-api.herokuapp.com/';
+const baseURL = 'https://everglow-api.herokuapp.com';
 
 const getAllServices = (callback) => {
   request(`${baseURL}/services`, (err, res) => {
